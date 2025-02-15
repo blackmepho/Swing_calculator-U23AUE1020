@@ -1,8 +1,3 @@
-# Swing_calculator-U23AUE1020
-name :Nasrullah Kolade Ige
-Department : Automotive Engineering
-Matric No: U23AUE1020
-
 Swing Calculator
 
 A simple graphical calculator built with Java Swing.
@@ -10,7 +5,7 @@ A simple graphical calculator built with Java Swing.
 Features
 - Basic arithmetic operations: addition, subtraction, multiplication, and division
 - Numeric input using buttons 0-9 and a decimal point
-- Operator selection: +, -, *, /
+- Operator selection: +, -, *, /, 
 - Equals button to calculate results
 - Delete button to remove last input digit
 - Clear button to reset calculator
@@ -37,4 +32,17 @@ This project is licensed under the MIT License. See `LICENSE.txt` for details.
 Acknowledgments
 - Oracle Corporation for Java Swing documentation and resources
 - GitHub community for inspiration and guidance
+
+GROUP MEMBERS			MATRIC NO	USERNAME
+1. BABAODEH DAVID  ADAMS	U23AUE1013	@adams723
+2. DIDEL  CELESTINA TAKFUNAAN	U23AUE1014	@Didel-Celestina
+3. JOSEPH  BITRUS  KASUWA	U23AUE1015	@bitrus01
+4. ILIYA  YAKUBU		U23AUE1018	@iyakubu22
+5. BALOGUN  MUIZI AFOLABI	U23AUE1019	@muizi1203
+6. IGE NASIRULLAH KOLADE	U23AUE1020	@blackmepho
+7. ABDULKAEEM ABDULRAZAG A	U23AUE1021	@ayedime4901
+8. IMAM OLUAYODE ABDUL		U23AUE1022	@imam-kayode
+9. JULIUS EMMANUEL CHAIMA NG	U23AUE1023	@mizzy-42
+10. ODUAH SAMUEL IKECHUKWU	U23AUE1024	@shelby
+
 
