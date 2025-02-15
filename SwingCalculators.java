@@ -2,19 +2,18 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class SwingCalculators extends JFrame implements ActionListener {
+public class SwingCalculatorV2 extends JFrame implements ActionListener {
 
     private JTextField displayField;
     private String currentInput = "";
     private String operator = "";
     private double result = 0;
 
-    public SwingCalculators() {
+    public SwingCalculatorV2() {
         setTitle("Simple Calculator");
         setSize(300, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        
 
         // Create display field
         displayField = new JTextField();
@@ -24,15 +23,14 @@ public class SwingCalculators extends JFrame implements ActionListener {
 
         // Create button panel
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(6, 3)); 
+        buttonPanel.setLayout(new GridLayout(5, 4)); // 5x4 GridLayout
 
         String[] buttonLabels = {
-                "7", "8", "9", 
-                "4", "5", "6",  
-                "1", "2", "3",  
-                "0", ".", "+", 
-                "-", "/", "*",
-                "=", "DEL","C", 
+                "7", "8", "9", "/",
+                "4", "5", "6", "*",
+                "1", "2", "3", "-",
+                "0", ".", "=", "+",
+                "sqrt", "DEL", "C", ""
         };
 
         for (String label : buttonLabels) {
@@ -56,6 +54,11 @@ public class SwingCalculators extends JFrame implements ActionListener {
             operator = command;
             result = Double.parseDouble(currentInput);
             currentInput = "";
+        } else if ("sqrt".equals(command)) {
+            double num = Double.parseDouble(currentInput);
+            result = Math.sqrt(num);
+            currentInput = Double.toString(result);
+            displayField.setText(currentInput);
         } else if ("=".equals(command)) {
             double num2 = Double.parseDouble(currentInput);
 
@@ -82,7 +85,7 @@ public class SwingCalculators extends JFrame implements ActionListener {
             currentInput = Double.toString(result);
             displayField.setText(currentInput);
             operator = "";
-        } else if ("Del".equals(command)) {
+        } else if ("DEL".equals(command)) {
             if (!currentInput.isEmpty()) {
                 currentInput = currentInput.substring(0, currentInput.length() - 1);
                 displayField.setText(currentInput);
@@ -97,8 +100,7 @@ public class SwingCalculators extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new SwingCalculators();
+            new SwingCalculatorV2();
         });
     }
 }
-
